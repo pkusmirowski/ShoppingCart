@@ -2,7 +2,7 @@
 1. Registration and login
 2. Logout
 3. Display products from the database
-4. Sort products the from database
+4. Sort products from the database
 5. Filtering products from the database
 6. Add product to cart
 7. Display current cart
