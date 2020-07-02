@@ -6,6 +6,6 @@
 5. Filtering products from the database
 6. Add product to cart
 7. Display current cart
-8. Save cart into database and clear session for new cart
+8. Save cart into the database and clear session for new cart
 
 Inside the folder only, the code without libraries, packages and database.
