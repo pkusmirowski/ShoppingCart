@@ -9,4 +9,4 @@
 8. Display current cart
 9. Save cart into the database and clear session for new cart
 
-Inside the folder only, the code without libraries, packages and database.
+In the folder, the code without libraries and packages.
