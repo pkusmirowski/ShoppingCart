@@ -24,13 +24,13 @@ namespace Shop
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Kontrolka Label1.
+        /// Kontrolka label1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label label1;
 
         /// <summary>
         /// Kontrolka txtLogin.
@@ -42,13 +42,13 @@ namespace Shop
         protected global::System.Web.UI.WebControls.TextBox txtLogin;
 
         /// <summary>
-        /// Kontrolka Label2.
+        /// Kontrolka label2.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label label2;
 
         /// <summary>
         /// Kontrolka txtPassword.
@@ -96,40 +96,40 @@ namespace Shop
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Kontrolka Button1.
+        /// Kontrolka button1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button button1;
 
         /// <summary>
-        /// Kontrolka Label3.
+        /// Kontrolka label3.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label label3;
 
         /// <summary>
-        /// Kontrolka ProductList.
+        /// Kontrolka productList.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ProductList;
+        protected global::System.Web.UI.WebControls.DropDownList productList;
 
         /// <summary>
-        /// Kontrolka Button4.
+        /// Kontrolka button4.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button button4;
 
         /// <summary>
         /// Kontrolka modA.

@@ -9,11 +9,8 @@
 
 namespace Shop
 {
-
-
     public partial class Dashboard
     {
-
         /// <summary>
         /// Kontrolka form1.
         /// </summary>

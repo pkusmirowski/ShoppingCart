@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Security.Cryptography;
-using System.Text;
-using System.Data.SqlClient;
-using System.Configuration;
-
-namespace Shop
+﻿namespace Shop
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data.SqlClient;
+    using System.Linq;
+    using System.Security.Cryptography;
+    using System.Text;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+
     public partial class Register : System.Web.UI.Page
     {
-        SqlCommand cmd = new SqlCommand();
-		//Połączenie z bazą danych
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=nazwa_bazy_danych; Initial Catalog=Account; Integrated Security=True;");
+        ////Połączenie z bazą danych
+        public readonly SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-G2VNIQS; Initial Catalog=Account; Integrated Security=True;");
 
-        //Funkcja haszująca
+        ////Funkcja haszująca
         /*
         static string ComputeSha256Hash(string value)
         {
@@ -35,61 +34,63 @@ namespace Shop
         }
         */
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected void PageLoad(object sender, EventArgs e)
         {
-            lblError2.Visible = false;
-            sqlCon.Open();
+            this.lblError2.Visible = false;
+            this.SqlCon.Open();
         }
-        protected void btnRegister_Click(object sender, EventArgs e)
-        {
 
-            if (string.IsNullOrEmpty(txtLoginRegister.Text) || string.IsNullOrEmpty(txtPasswordRegister.Text) || string.IsNullOrEmpty(txtPasswordRegister2.Text))
+        protected void BtnRegisterClick(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtLoginRegister.Text) || string.IsNullOrEmpty(this.txtPasswordRegister.Text) || string.IsNullOrEmpty(this.txtPasswordRegister2.Text))
             {
-                lblError2.Visible = true;
-                lblError2.Text = "Pola nie mogą być puste.";
+                this.lblError2.Visible = true;
+                this.lblError2.Text = "Pola nie mogą być puste.";
             }
             else
             {
-                if (txtPasswordRegister.Text == txtPasswordRegister2.Text)
+                if (this.txtPasswordRegister.Text == this.txtPasswordRegister2.Text)
                 {
+                    this.SqlCon.Open();
                     try
                     {
-                        //Wstawienie użytkownika do bazy danych
-                        SqlCommand cmd = new SqlCommand("INSERT INTO [User]" + "(Email,Password)values(@email,@password)", sqlCon);
-                        cmd.Parameters.AddWithValue("@email", txtLoginRegister.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPasswordRegister.Text);
+                        ////Wstawienie użytkownika do bazy danych
+                        SqlCommand cmd = new SqlCommand("INSERT INTO [User]" + "(Email,Password)values(@email,@password)", this.SqlCon);
+                        cmd.Parameters.AddWithValue("@email", this.txtLoginRegister.Text);
+                        cmd.Parameters.AddWithValue("@password", this.txtPasswordRegister.Text);
                         cmd.ExecuteNonQuery();
-                        lblError2.Visible = true;
-                        lblError2.Text = "Konto zostało utworzone";
-                        sqlCon.Close();
+                        this.lblError2.Visible = true;
+                        this.lblError2.Text = "Konto zostało utworzone";
+                        this.SqlCon.Close();
                     }
                     catch (SqlException ex)
                     {
-                        //Email jako Primary Key
-                        //Sprawdza czy się powtarza w bazie
+                        ////Email jako Primary Key
+                        ////Sprawdza czy się powtarza w bazie
                         if (ex.Number == 2627)
                         {
-                            lblError2.Visible = true;
-                            lblError2.Text = "Użytkownik już istnieje.";
+                            this.lblError2.Visible = true;
+                            this.lblError2.Text = "Użytkownik już istnieje.";
                         }
                         else
                         {
-                            lblError2.Visible = true;
-                            lblError2.Text = $"Błąd: {ex.Message}";
+                            this.lblError2.Visible = true;
+                            this.lblError2.Text = $"Błąd: {ex.Message}";
                         }
-                        sqlCon.Close();
+
+                        this.SqlCon.Close();
                     }
                 }
                 else
                 {
-                    lblError2.Visible = true;
-                    lblError2.Text = "Podane hasła są różne.";
+                    this.lblError2.Visible = true;
+                    this.lblError2.Text = "Podane hasła są różne.";
                 }
             }
         }
 
-        protected void btnRegisterBack_Click(object sender, EventArgs e) => Response.Redirect("Login.aspx");
-        protected void txtPasswordRegister_TextChanged(object sender, EventArgs e) => txtPasswordRegister.Text = txtPasswordRegister.Text;
+        protected void BtnRegisterBackClick(object sender, EventArgs e) => Response.Redirect("Login.aspx");
 
+        protected void TxtPasswordRegisterTextChanged(object sender, EventArgs e) => this.txtPasswordRegister.Text = this.txtPasswordRegister.Text;
     }
 }

@@ -12,9 +12,9 @@
         <div>
             <asp:Label ID="userInfo" runat="server" Text=""></asp:Label>
             <br />
-            <asp:Button ID="btnLogout" runat="server" Text="Wyloguj" OnClick="btnLogout_Click" />
+            <asp:Button ID="btnLogout" runat="server" Text="Wyloguj" OnClick="BtnLogoutClick" />
             &nbsp;
-            <asp:Button ID="btnBack" runat="server" Text="Powrót" OnClick="btnBack_Click" style="height: 26px" />
+            <asp:Button ID="btnBack" runat="server" Text="Powrót" OnClick="BtnBackClick" style="height: 26px" />
         </div>
     </form>
 </body>

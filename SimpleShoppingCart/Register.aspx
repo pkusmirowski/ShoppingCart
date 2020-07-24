@@ -13,21 +13,21 @@
             <table style="margin:auto;border:5px solid white">
                 <tr>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Login"></asp:Label></td>
+                        <asp:Label ID="label3" runat="server" Text="Login"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="txtLoginRegister" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="Hasło"></asp:Label>
+                        <asp:Label ID="label4" runat="server" Text="Hasło"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtPasswordRegister" runat="server" TextMode="Password" OnTextChanged="txtPasswordRegister_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="txtPasswordRegister" runat="server" TextMode="Password" OnTextChanged="TxtPasswordRegisterTextChanged"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="Powtórz hasło"></asp:Label>
+                        <asp:Label ID="label5" runat="server" Text="Powtórz hasło"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtPasswordRegister2" runat="server" TextMode="Password"></asp:TextBox>
@@ -36,13 +36,13 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnRegister" runat="server" Text="Zarejestruj" OnClick="btnRegister_Click" />
+                        <asp:Button ID="btnRegister" runat="server" Text="Zarejestruj" OnClick="BtnRegisterClick" />
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnRegister2" runat="server" Text="Panel logowania" OnClick="btnRegisterBack_Click" />
+                        <asp:Button ID="btnRegister2" runat="server" Text="Panel logowania" OnClick="BtnRegisterBackClick" />
                     </td>
                 </tr>
                 <tr>

@@ -24,13 +24,13 @@ namespace Shop
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Kontrolka Label3.
+        /// Kontrolka label3.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label label3;
 
         /// <summary>
         /// Kontrolka txtLoginRegister.
@@ -42,13 +42,13 @@ namespace Shop
         protected global::System.Web.UI.WebControls.TextBox txtLoginRegister;
 
         /// <summary>
-        /// Kontrolka Label4.
+        /// Kontrolka label4.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label label4;
 
         /// <summary>
         /// Kontrolka txtPasswordRegister.
@@ -60,13 +60,13 @@ namespace Shop
         protected global::System.Web.UI.WebControls.TextBox txtPasswordRegister;
 
         /// <summary>
-        /// Kontrolka Label5.
+        /// Kontrolka label5.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label label5;
 
         /// <summary>
         /// Kontrolka txtPasswordRegister2.

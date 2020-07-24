@@ -13,13 +13,13 @@
             <table style="margin:auto;border:5px solid white">
                 <tr>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="Login"></asp:Label></td>
+                        <asp:Label ID="label1" runat="server" Text="Login"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="txtLogin" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Hasło"></asp:Label>
+                        <asp:Label ID="label2" runat="server" Text="Hasło"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
@@ -28,19 +28,19 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="BtnLoginClick" />
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnLogin2" runat="server" Text="Zarejestruj się" OnClick="btnLoginBack_Click" />
+                        <asp:Button ID="btnLogin2" runat="server" Text="Zarejestruj się" OnClick="BtnLoginBackClick" />
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="sendEmail" runat="server" Text="Przypomnij hasło" OnClick="btnSendEmail_Click" />
+                        <asp:Button ID="sendEmail" runat="server" Text="Przypomnij hasło" OnClick="BtnSendEmailClick" />
                     </td>
                 </tr>
                 <tr>
@@ -52,19 +52,19 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Pokaż listę produktów" OnClick="ShowProduct_Click"/>
+                        <asp:Button ID="button1" runat="server" Text="Pokaż listę produktów" OnClick="ShowProductClick"/>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Pokaż wszystko według:   " ></asp:Label>
-                        <asp:DropDownList ID="ProductList" runat="server">
+                        <asp:Label ID="label3" runat="server" Text="Pokaż wszystko według:   " ></asp:Label>
+                        <asp:DropDownList ID="productList" runat="server">
                             <asp:ListItem Text="Nazwa" Value="name"></asp:ListItem>
                             <asp:ListItem Text="Kraj" Value="country"></asp:ListItem>
                             <asp:ListItem Text="Cena" Value="price"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:Button ID="Button4" runat="server" Text="Sortuj" OnClick="SortProduct_Click" />
+                        <asp:Button ID="button4" runat="server" Text="Sortuj" OnClick="SortProductClick" />
                     </td>
                 </tr>
                  <tr>
@@ -74,7 +74,7 @@
                         <asp:TextBox ID="modA" runat="server" Width="90"></asp:TextBox>
                         do
                         <asp:TextBox ID="modB" runat="server" Width="90"></asp:TextBox>
-                        <asp:Button ID="sortBetween" runat="server" Text="Pokaż" OnClick="SortBetween_Click" />
+                        <asp:Button ID="sortBetween" runat="server" Text="Pokaż" OnClick="SortBetweenClick" />
                     </td>
                 </tr>
                 <tr>
@@ -89,7 +89,7 @@
                                 <asp:TemplateField>
                                     <ItemTemplate>
                                         <asp:TextBox ID="quantityBox" runat="server"></asp:TextBox>
-                                        <asp:Button ID="btnAdd" runat="server" Text="Dodaj do koszyka" OnClick="Row_Selected" />
+                                        <asp:Button ID="btnAdd" runat="server" Text="Dodaj do koszyka" OnClick="RowSelected" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                            </Columns>
@@ -99,9 +99,9 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnShowCart" runat="server" Text="Koszyk" OnClick="btnShowCart_Click" />
+                        <asp:Button ID="btnShowCart" runat="server" Text="Koszyk" OnClick="BtnShowCartClick" />
                         &nbsp;
-                        <asp:Button ID="btnPlaceOrder" runat="server" Text="Złóż zamówienie" OnClick="btnPlaceOrder_Click" />
+                        <asp:Button ID="btnPlaceOrder" runat="server" Text="Złóż zamówienie" OnClick="BtnPlaceOrderClick" />
                     </td>
                 </tr>
                 <tr>
