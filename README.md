@@ -1,4 +1,4 @@
-# SimpleShoppingCart
+# Shopping Cart
 1. Registration and login
 2. Logout
 3. E-mail password reminder
